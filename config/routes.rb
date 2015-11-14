@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+get 'welcome' => 'pages#home'
+get 'todo' => 'tasks#index'
+get '/tasks/new' => 'tasks#new'
+post 'tasks' => 'tasks#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

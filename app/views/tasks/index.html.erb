@@ -1,0 +1,20 @@
+<div class="header">
+  <div class="container">
+    <img src="https://cdn2.iconfinder.com/data/icons/business-office-icons/256/To-do_List-512.png">
+    <h1>Todo List</h1>
+  </div>
+</div>
+
+<div class="tasks">
+  <div class="container">
+  
+	<% @tasks.each do |task| %> 
+<div class="task"> 
+  <p class="name"><%= task.name %></p>
+  <br>
+  <p class="content"><%= task.description %></p> 
+</div> 
+<% end %>
+<%= link_to 'New Task', "tasks/new" %>
+  </div>
+</div>
